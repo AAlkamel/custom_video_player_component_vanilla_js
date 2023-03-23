@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom video player</title>
+  <link
+  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  rel="stylesheet"
+  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+  crossorigin="anonymous"
+/>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Custom video player </h1>
+    <div id="video-component">
+      <video id="video" src="./assets/gone.mp4" poster="./assets/gone.jpg"></video>
+      <div class="controls">
+
+          <i id="play" class=" btn fa fa-play "></i>
+        
+          <i id="stop" class="btn fa fa-stop "></i>
+          
+          <input
+          type="range"
+          id="progress"
+          class="progress"
+          min="0"
+          max="100"
+          step="0.01"
+          value="0"
+          />
+          <span></span>
+          <i id="mute" class="btn fa fa-volume-up"></i>
+          <input
+          type="range"
+          id="volume"
+          class="progress"
+          min="0"
+          max="100"
+          step="1"
+          value="50"
+          />
+        <span class="timestamp" id="timestamp">00:00:00</span>
+      </div>
+      <i id="bigBtn" class="center-play-btn btn fa fa-play "></i>
+    </div>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

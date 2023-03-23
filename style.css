@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+:root{
+  --headline-color:#666;
+  --paragraph-color:#888;
+  --main-color:rgb(252, 184, 58);
+}
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+h1{
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 1.25rem;
+  color: var(--headline-color);
+}
+.container{
+  margin: 0 auto;
+    max-width: 1000px;
+    margin-bottom: 3rem;
+}
+#video-component{
+  position: relative;
+  background-color: #666;
+  border-radius: 4px;
+}
+.center-play-btn{
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 40px;
+    transform: translate(-50%, -50%);
+    transition: .3s ease-out all;
+    opacity: 1;
+}
+.hide{
+  opacity: 0;
+  display: none;
+}
+.controls{
+  position: relative;
+  display: grid;
+  grid-template-columns: 25PX 25PX auto 8px 80px 80px;
+  gap: 12px;
+  padding: 8px 16px;
+  align-items: center;
+}
+video{
+  max-width: 100%;
+  border-radius: 4px 4px 0 0;
+}
+.timestamp{
+  justify-self: end;
+    font-size: 0.75rem;
+    color: var(--main-color);
+    font-weight: 600;
+}
+.progress{
+  -webkit-appearance: none;
+    height: 2px;
+    position: absolute;
+    width: calc(100% - 32px);
+    left: 16px;
+    top: -6px;
+    border-radius: 6px;
+    background-color: var(--main-color);
+    overflow: hidden;
+    transition: .3s ease-out;
+}
+.progress:hover{
+    height: 8px;
+    top: -9px;
+}
+.progress::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color:rgb(255, 234, 196);
+  box-shadow: -500px 0 0 494px rgb(235, 57, 57) ;
+  /* box-shadow: 0 0 5px rgba(42, 41, 43, 0.596) ; */
+}
+.progress::-webkit-slider-thumb:hover{
+  scale: 1.1;
+  background-color:rgb(223, 198, 152);
+  /* cursor: grab; */
+}
+#volume {
+  position: initial;
+    width: 100%;
+}
+.btn{
+    color: var(--main-color);
+    cursor: pointer;
+    transition: .3s ease-in-out all;
+}
+.btn:hover{
+  color: #fff;
+}
+
